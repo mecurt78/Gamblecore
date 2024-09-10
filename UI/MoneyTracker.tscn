@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://buehjocgtnqac"]
+
+[ext_resource type="Script" path="res://Scripts/MoneyTracker.gd" id="1_frpj6"]
+
+[node name="MoneyTracker" type="Control" node_paths=PackedStringArray("moneyDisplay")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_frpj6")
+money_in_cents = 1000
+moneyDisplay = NodePath("TextEdit")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_right = 487.0
+offset_bottom = 39.0
+text = "Money: 0"

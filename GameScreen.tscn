@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlclan5fenjhn"]
+
+[ext_resource type="PackedScene" uid="uid://buehjocgtnqac" path="res://UI/MoneyTracker.tscn" id="1_kaxjn"]
+[ext_resource type="PackedScene" uid="uid://8noibcioeci4" path="res://UI/simple_slot.tscn" id="2_8nk46"]
+
+[node name="GameScreen" type="Node2D"]
+
+[node name="MoneyTracker" parent="." instance=ExtResource("1_kaxjn")]
+
+[node name="Control" parent="." node_paths=PackedStringArray("moneyTracker") instance=ExtResource("2_8nk46")]
+moneyTracker = NodePath("../MoneyTracker")

@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://8noibcioeci4"]
+
+[ext_resource type="Script" path="res://Scripts/SimpleSlot.gd" id="1_ak8mw"]
+[ext_resource type="Texture2D" uid="uid://cc3haiw8vnbyo" path="res://Sprites/debugSprite0.tres" id="2_cik1p"]
+[ext_resource type="Texture2D" uid="uid://bpntdxv6ese4e" path="res://Sprites/debugSprite1.tres" id="3_7kc3y"]
+[ext_resource type="Texture2D" uid="uid://wu07qq4xel1i" path="res://Sprites/debugSprite3.tres" id="4_qab87"]
+
+[node name="Control" type="Control" node_paths=PackedStringArray("spriteList")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ak8mw")
+spriteList = [NodePath("Sprite2D"), NodePath("Sprite2D2"), NodePath("Sprite2D3")]
+spriteImages = Array[Texture2D]([ExtResource("2_cik1p"), ExtResource("3_7kc3y"), ExtResource("4_qab87")])
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 556.0
+offset_right = 722.0
+offset_bottom = 633.0
+text = "Let's go gambling!"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(159, 318)
+scale = Vector2(9.96875, 9.96875)
+texture = ExtResource("2_cik1p")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(579, 316)
+scale = Vector2(9.96875, 9.96875)
+texture = ExtResource("2_cik1p")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(988, 325)
+scale = Vector2(9.96875, 9.96875)
+texture = ExtResource("2_cik1p")
+
+[connection signal="pressed" from="Button" to="." method="OnPull"]
